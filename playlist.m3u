@@ -1,33 +1,33 @@
 #EXTM3U url-tvg="https://github.com/GreekTVApp/EPG-GRCY/releases/download/EPG/epg.xml.gz"
-#EXTINF:-1 group-title="Greece" tvg-name="ERT 1" tvg-logo="https://i.imgur.com/slE8U5m.png",ERT1 HD
+#EXTINF:-1 group-title="Greece" tvg-name="ERT 1" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert1.png",ERT1 HD
 https://ert-live-bcbs15228.siliconweb.com/media/ert_1/ert_1.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ERT 2" tvg-logo="https://i.imgur.com/o4BUdoL.png",ERT2 HD
+#EXTINF:-1 group-title="Greece" tvg-name="ERT 2" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert2.png",ERT2 HD
 https://ert-live-bcbs15228.siliconweb.com/media/ert_2/ert_2.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ERT 3" tvg-logo="https://i.imgur.com/rv4JLBO.png",ERT3 HD
+#EXTINF:-1 group-title="Greece" tvg-name="ERT 3" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert3.png",ERT3 HD
 https://ert-live-bcbs15228.siliconweb.com/media/ert_3/ert_3.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="digea.mega.gr" tvg-logo="https://i.imgur.com/Dy4RR7G.png",MEGA HD
+#EXTINF:-1 group-title="Greece" tvg-name="digea.mega.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/mega.png",MEGA HD
 https://streamcdnh4-c98db5952cb54b358365984178fb898a.msvdn.net/live/S86713049/gonOwuUacAxM/playlist.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="digea.alpha.gr" tvg-logo="https://i.imgur.com/utv0rWj.png",ALPHA HD
+#EXTINF:-1 group-title="Greece" tvg-name="digea.alpha.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/alpha.png",ALPHA HD
 https://alphatvlive.siliconweb.com/1/Y2Rsd1lUcUVoajcv/UVdCN25h/hls/live/playlist.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="digea.star.gr" tvg-logo="https://i.imgur.com/zGpwulO.png",STAR HD
+#EXTINF:-1 group-title="Greece" tvg-name="digea.star.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/star.png",STAR HD
 https://livestar.siliconweb.com/media/star1/star1.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="digea.skai.gr" tvg-logo="https://i.imgur.com/BXmta4G.png",SKAI HD
+#EXTINF:-1 group-title="Greece" tvg-name="digea.skai.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/skai.png",SKAI HD
 https://skai-live-gr-cy-back.siliconweb.com/media/cambria4/index.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="digea.openbeyond.gr" tvg-logo="https://i.imgur.com/72GOh2Z.png",OPEN HD
+#EXTINF:-1 group-title="Greece" tvg-name="digea.openbeyond.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/open.png",OPEN HD
 https://liveopencloud.siliconweb.com/1/ZlRza2R6L2tFRnFJ/eWVLSlQx/hls/live/playlist.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="digea.kontra.gr" tvg-logo="https://i.imgur.com/6woXJdd.png",KONTRA
+#EXTINF:-1 group-title="Greece" tvg-name="digea.kontra.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/kontra.png",KONTRA
 https://kontralive.siliconweb.com/live/kontratv/playlist.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="onetv.gr" tvg-logo="https://i.imgur.com/ts4qd1U.png",ONE HD
+#EXTINF:-1 group-title="Greece" tvg-name="onetv.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/one.png",ONE HD
 https://streaming.onetv.gr/show/onetv.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ert.ertworld.gr" tvg-logo="https://i.imgur.com/Jjds4h5.png",ERT WORLD
+#EXTINF:-1 group-title="Greece" tvg-name="ert.ertworld.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertworld.png",ERT WORLD
 https://ert-live-bcbs15228.siliconweb.com/media/ert_world/ert_world.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ert.ertnews.gr" tvg-logo="https://i.imgur.com/ujTPC3J.jpg",ERT NEWS
+#EXTINF:-1 group-title="Greece" tvg-name="ert.ertnews.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertnews.png",ERT NEWS
 https://ert-live-bcbs15228.siliconweb.com/media/ert_news/ert_news.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ert.ertnews.gr" tvg-logo="https://i.imgur.com/ujTPC3J.jpg",ERT NEWS 2
+#EXTINF:-1 group-title="Greece" tvg-name="ert.ertnews.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertnews2.png",ERT NEWS 2
 https://ert-live-bcbs15228.siliconweb.com/media/ert_news_2/ert_news_2.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ert.ertsports.gr" tvg-logo="https://i.imgur.com/hxajA2g.png",ERT SPORTS
+#EXTINF:-1 group-title="Greece" tvg-name="ert.ertsports.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertsports.png",ERT SPORTS
 http://ert-live-bcbs15228.siliconweb.com/media/ert_sports_ww/ert_sports_ww.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ert.ertsports.gr" tvg-logo="https://i.imgur.com/hxajA2g.png",ERT SPORTS 2
+#EXTINF:-1 group-title="Greece" tvg-name="ert.ertsports.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertsports2.png",ERT SPORTS 2
 http://ert-live-bcbs15228.siliconweb.com/media/ert_sports_ww/ert_sports2_ww.m3u8
-#EXTINF:-1 group-title="Greece" tvg-name="ert.vouli.gr" tvg-logo="https://i.imgur.com/ToYaStx.png",VOULI
+#EXTINF:-1 group-title="Greece" tvg-name="ert.vouli.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/vouli.png",VOULI
 https://streamer-cache.grnet.gr/parliament/hls/webtv.m3u8
