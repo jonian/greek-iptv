@@ -26,8 +26,8 @@ https://ert-live-bcbs15228.siliconweb.com/media/ert_news/ert_news.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ert.ertnews.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertnews2.png",ERT NEWS 2
 https://ert-live-bcbs15228.siliconweb.com/media/ert_news_2/ert_news_2.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ert.ertsports.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertsports1.png",ERT SPORTS
-http://ert-live-bcbs15228.siliconweb.com/media/ert_sports_ww/ert_sports_ww.m3u8
+http://ert-live-bcbs15228.siliconweb.com/media/ert_sports/ert_sports.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ert.ertsports.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertsports2.png",ERT SPORTS 2
-http://ert-live-bcbs15228.siliconweb.com/media/ert_sports_ww/ert_sports2_ww.m3u8
+http://ert-live-bcbs15228.siliconweb.com/media/ert_sports_2/ert_sports_2.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ert.vouli.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/vouli.png",VOULI
 https://streamer-cache.grnet.gr/parliament/hls/webtv.m3u8
