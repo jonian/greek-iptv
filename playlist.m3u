@@ -19,6 +19,8 @@ https://liveopencloud.siliconweb.com/1/ZlRza2R6L2tFRnFJ/eWVLSlQx/hls/live/playli
 https://kontralive.siliconweb.com/live/kontratv/playlist.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="onetv.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/one.png",ONE HD
 https://streaming.onetv.gr/show/onetv.m3u8
+#EXTINF:-1 group-title="Greece" tvg-name="netmax.com" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/netmax.png",Netmax TV
+http://live.netmaxtv.com:8080/live/live/playlist.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ert.ertworld.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertworld.png",ERT WORLD
 https://ert-live-bcbs15228.siliconweb.com/media/ert_world/ert_world.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ert.ertnews.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ertnews.png",ERT NEWS
