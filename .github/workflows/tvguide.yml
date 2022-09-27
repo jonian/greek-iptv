@@ -1,0 +1,52 @@
+---
+name: Update TvGuide
+
+on:
+  schedule:
+    - cron: '0 12 * * *'
+
+  push:
+    branches: [master]
+    paths:
+      - tvguide.json
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
+
+      - name: Generate
+        run: bundle exec rake epg:generate
+
+      - name: Create GZ
+        run: gzip -k tvguide.xml
+
+      - name: Upload GZ
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./tvguide.xml.gz
+          asset_name: tvguide.xml.gz
+          tag: IPTV
+          body: Latest generated release
+          overwrite: true
+
+      - name: Upload XML
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./tvguide.xml
+          asset_name: tvguide.xml
+          tag: IPTV
+          body: Latest generated release
+          overwrite: true
