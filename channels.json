@@ -1,21 +1,21 @@
 [
   {
     "title": "ERT1 HD",
-    "name": "ERT 1",
+    "name": "ert.ert1.gr",
     "logo": "ert1.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept1-live",
     "m3u": "https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert1/ert_ev1_main/mainabr/playlist_dvr.m3u8"
   },
   {
     "title": "ERT2 HD",
-    "name": "ERT 2",
+    "name": "ert.ert2.gr",
     "logo": "ert2.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept2-live",
     "m3u": "https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert2/ert_ev2_main/mainabr/playlist.m3u8"
   },
   {
     "title": "ERT3 HD",
-    "name": "ERT 3",
+    "name": "ert.ert3.gr",
     "logo": "ert3.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept3-live",
     "m3u": "https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert3/ert_ev3_main/mainabr/playlist.m3u8"
@@ -64,14 +64,14 @@
   },
   {
     "title": "ONE HD",
-    "name": "onetv.gr",
+    "name": "one.onetv.gr",
     "logo": "one.png",
     "web": "https://onetv.gr",
     "m3u": "https://streaming.onetv.gr/show/onetv.m3u8"
   },
   {
     "title": "Netmax TV",
-    "name": "netmax.com",
+    "name": "films.netmax.com",
     "logo": "netmax.png",
     "web": "http://netmaxtv.com",
     "m3u": "http://live.netmaxtv.com:8080/live/live/playlist.m3u8"
