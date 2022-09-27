@@ -121,8 +121,11 @@ class Ert < Provider
     return unless mapping.key?(chid)
 
     crow = node.ancestors('tr[bgcolor]').first
-    time = crow.children.css('td').first.text.strip
+    time = crow.first_element_child.text.strip
     desc = crow.css('font').first || node
+
+    nrow = next_row(crow)
+    stop = nrow.first_element_child.text.strip
 
     id, name = mapping[chid]
 
@@ -134,10 +137,18 @@ class Ert < Provider
       programme: {
         channel: id,
         start: date.strftime("%Y-%m-%d #{time}:00"),
+        stop: date.strftime("%Y-%m-%d #{stop}:00"),
         title: node.text.squish,
         desc: desc.text.squish
       }
     }
+  end
+
+  private
+
+  def next_row(node)
+    row = node.next_element || node.parent.first_element_child
+    row.css('a.black').any? ? row : next_row(row)
   end
 end
 
@@ -164,7 +175,7 @@ class Parser
 
       programmes.each do |programme|
         programme[:start] = time programme[:start]
-        programme[:stop]  = time programme[:stop] if programme.key?(:stop)
+        programme[:stop]  = time programme[:stop]
 
         xml.programme **programme.slice(:start, :stop, :channel) do
           xml.title programme[:title], lang: 'el'
