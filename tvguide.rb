@@ -6,6 +6,8 @@ require 'builder'
 require 'nokogiri'
 require 'active_support/all'
 
+ENV['TZ'] = 'Europe/Athens'
+
 PGNAME = 'greek-iptv'
 GITURI = 'https://raw.githubusercontent.com/jonian/greek-iptv'
 
