@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://github.com/GreekTVApp/EPG-GRCY/releases/download/EPG/epg.xml.gz"
+#EXTM3U url-tvg="https://raw.githubusercontent.com/jonian/greek-iptv/master/tvguide.xml"
 #EXTINF:-1 group-title="Greece" tvg-name="ert.ert1.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert1.png",ERT1 HD
 https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert1/ert_ev1_main/mainabr/playlist_dvr.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ert.ert2.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert2.png",ERT2 HD
