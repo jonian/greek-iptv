@@ -1,0 +1,49 @@
+---
+name: Update Playlist
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - channels.json
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
+
+      - name: Generate
+        run: bundle exec rake m3u:generate
+
+      - name: Create GZ
+        run: gzip -k playlist.m3u
+
+      - name: Upload GZ
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./playlist.m3u.gz
+          asset_name: playlist.m3u.gz
+          tag: IPTV
+          body: Latest generated release
+          overwrite: true
+
+      - name: Upload M3U
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./playlist.m3u
+          asset_name: playlist.m3u
+          tag: IPTV
+          body: Latest generated release
+          overwrite: true
