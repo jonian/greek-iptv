@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://github.com/GreekTVApp/EPG-GRCY/releases/download/EPG/epg.xml.gz"
 #EXTINF:-1 group-title="Greece" tvg-name="ERT 1" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert1.png",ERT1 HD
-https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert1/ert_ev1_main/mainabr/playlist.m3u8
+https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert1/ert_ev1_main/mainabr/playlist_dvr.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ERT 2" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert2.png",ERT2 HD
 https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert2/ert_ev2_main/mainabr/playlist.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="ERT 3" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/ert3.png",ERT3 HD
@@ -12,7 +12,7 @@ https://alphatvlive.siliconweb.com/1/Y2Rsd1lUcUVoajcv/UVdCN25h/hls/live/playlist
 #EXTINF:-1 group-title="Greece" tvg-name="digea.star.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/star.png",STAR HD
 https://livestar.siliconweb.com/media/star1/star1.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="digea.skai.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/skai.png",SKAI HD
-https://skai-live-gr-cy-back.siliconweb.com/media/cambria4/index.m3u8
+https://skai-live-back.siliconweb.com/media/cambria4/index.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="digea.openbeyond.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/open.png",OPEN HD
 https://liveopencloud.siliconweb.com/1/ZlRza2R6L2tFRnFJ/eWVLSlQx/hls/live/playlist.m3u8
 #EXTINF:-1 group-title="Greece" tvg-name="digea.kontra.gr" tvg-logo="https://raw.githubusercontent.com/jonian/greek-iptv/master/logos/kontra.png",KONTRA
