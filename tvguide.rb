@@ -98,10 +98,11 @@ class Digea < Provider
 end
 
 class Ert < Provider
-  attr_accessor :date
+  attr_accessor :date, :prev
 
   def fetch(date)
     self.date = date
+    self.prev = -1
 
     request(:post, data: {
       frmDates: date.strftime('%j'),
@@ -120,6 +121,8 @@ class Ert < Provider
     chid = node.attr(:href).match(/chid=(\d+)/)[1]
     return unless mapping.key?(chid)
 
+    id, name = mapping[chid]
+
     crow = node.ancestors('tr[bgcolor]').first
     time = crow.first_element_child.text.strip
     desc = crow.css('font').first || node
@@ -127,7 +130,13 @@ class Ert < Provider
     nrow = next_row(crow)
     stop = nrow.first_element_child.text.strip
 
-    id, name = mapping[chid]
+    itime = time.to_i
+    istop = stop.to_i
+
+    self.date = date.tomorrow if prev > itime
+    self.prev = itime
+
+    sdate = itime > istop ? date.tomorrow : date
 
     {
       channel: {
@@ -137,7 +146,7 @@ class Ert < Provider
       programme: {
         channel: id,
         start: date.strftime("%Y-%m-%d #{time}:00"),
-        stop: date.strftime("%Y-%m-%d #{stop}:00"),
+        stop: sdate.strftime("%Y-%m-%d #{stop}:00"),
         title: node.text.squish,
         desc: desc.text.squish
       }
