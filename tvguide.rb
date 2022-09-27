@@ -18,12 +18,10 @@ class Provider
   end
 
   def run
-    items = matrix.flat_map do |item|
-      parse(fetch item)
-    end
-
-    items.compact.filter_map do |item|
-      process(item)
+    matrix.flat_map do |item|
+      parse(fetch item).filter_map do |item|
+        process(item) if item
+      end
     end
   end
 
