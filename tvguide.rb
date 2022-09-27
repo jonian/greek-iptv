@@ -98,11 +98,10 @@ class Digea < Provider
 end
 
 class Ert < Provider
-  attr_accessor :date, :prev
+  attr_accessor :date, :store
 
   def fetch(date)
     self.date = date
-    self.prev = -1
 
     request(:post, data: {
       frmDates: date.strftime('%j'),
@@ -127,16 +126,9 @@ class Ert < Provider
     time = crow.first_element_child.text.strip
     desc = crow.css('font').first || node
 
-    nrow = next_row(crow)
-    stop = nrow.first_element_child.text.strip
-
-    itime = time.to_i
-    istop = stop.to_i
-
-    self.date = date.tomorrow if prev > itime
-    self.prev = itime
-
-    sdate = itime > istop ? date.tomorrow : date
+    data      = context(chid)
+    data.date = data.date.tomorrow if data.prev > time.to_i
+    data.prev = time.to_i
 
     {
       channel: {
@@ -145,19 +137,37 @@ class Ert < Provider
       },
       programme: {
         channel: id,
-        start: date.strftime("%Y-%m-%d #{time}:00"),
-        stop: sdate.strftime("%Y-%m-%d #{stop}:00"),
+        start: data.date.strftime("%Y-%m-%d #{time}:00"),
         title: node.text.squish,
         desc: desc.text.squish
       }
     }
   end
 
+  def run
+    groups = super.group_by do |item|
+      item.dig(:channel, :id)
+    end
+
+    groups.values.flat_map do |group|
+      group.map.with_index do |item, index|
+        node = group[index + 1] || group[0]
+        stop = Time.parse node.dig(:programme, :start)
+        stop = stop.tomorrow if stop < Time.parse(item.dig(:programme, :start))
+
+        item[:programme][:stop] = stop.to_s
+        item
+      end
+    end
+  end
+
   private
 
-  def next_row(node)
-    row = node.next_element || node.parent.first_element_child
-    row.css('a.black').any? ? row : next_row(row)
+  def context(key)
+    self.store      ||= {}
+    self.store[key] ||= OpenStruct.new(date: date, prev: -1)
+
+    store[key]
   end
 end
 
