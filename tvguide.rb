@@ -28,7 +28,7 @@ class Provider
   end
 
   def matrix
-    Array(Date.today..Date.today.next_week)
+    Array(Date.today.yesterday..Date.today.next_week)
   end
 
   def fetch
