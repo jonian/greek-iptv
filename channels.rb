@@ -1,7 +1,7 @@
 require 'json'
 
 GITURI = 'https://raw.githubusercontent.com/jonian/greek-iptv/master'
-TVGURI = "#{GITURI}/tvguide.xml"
+TVGURI = 'https://github.com/jonian/greek-iptv/releases/download/IPTV/tvguide.xml.gz'
 
 class Channel < OpenStruct
   def group
