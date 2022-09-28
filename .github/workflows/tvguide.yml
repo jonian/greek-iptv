@@ -8,7 +8,8 @@ on:
   push:
     branches: [master]
     paths:
-      - tvguide.json
+      - 'tvguide.json'
+      - 'tvguide.rb'
 
   workflow_dispatch:
 

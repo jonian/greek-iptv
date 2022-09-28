@@ -5,7 +5,8 @@ on:
   push:
     branches: [master]
     paths:
-      - channels.json
+      - 'channels.json'
+      - 'channels.rb'
 
   workflow_dispatch:
 
