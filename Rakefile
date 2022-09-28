@@ -1,18 +1,21 @@
+require_relative 'channels'
+require_relative 'tvguide'
+
 namespace :m3u do
   desc 'Update playlist urls in channels.json'
   task :update do
-    %x{ruby channels.rb update}
+    Channels.run(:update)
   end
 
   desc 'Generate playlist.xml from channels.json'
   task :generate do
-    %x{ruby channels.rb}
+    Channels.run(:generate)
   end
 end
 
 namespace :epg do
   desc 'Generate tvguide.xml from tvguide.json'
   task :generate do
-    %x{ruby tvguide.rb}
+    TvGuide.run
   end
 end
