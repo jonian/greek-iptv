@@ -1,3 +1,4 @@
 Gemfile.lock
 playlist.m3u
 tvguide.xml
+*.gz
