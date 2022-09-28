@@ -174,6 +174,51 @@ module TvGuide
     end
   end
 
+  class Onetv < Provider
+    attr_reader :data, :index, :date
+
+    def matrix
+      Array(Date.today.yesterday..Date.today.next.succ)
+    end
+
+    def fetch(date)
+      @date   = date
+      @index  = matrix.index(date)
+      @data ||= request(:get)
+    end
+
+    def parse(data)
+      Nokogiri::HTML(data).css(".tvguide-item:nth-child(#{index}) > dl.grid")
+    end
+
+    def process(node)
+      time  = node.css('span.time').first.text
+      title = node.css('a.title').first.text
+      desc  = node.css('a.program-desc').first.text
+
+      id, name    = ['one.onetv.gr', 'ONE TV']
+      start, stop = time.strip.split('-').map(&:strip)
+
+      sdate = start.to_i > stop.to_i ? date.tomorrow : date
+      start = date.strftime("%Y-%m-%d #{start}:00")
+      stop  = sdate.strftime("%Y-%m-%d #{stop}:00")
+
+      {
+        channel: {
+          id: id,
+          name: name
+        },
+        programme: {
+          channel: id,
+          start: start,
+          stop: stop,
+          title: title.squish,
+          desc: desc.presence || title
+        }
+      }
+    end
+  end
+
   class Builder
     attr_reader :ids
 
