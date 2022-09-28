@@ -144,38 +144,37 @@ module TvGuide
     end
   end
 
-  class Ert < Provider
-    attr_accessor :date, :store
+  class Vouli < Provider
+    attr_reader :date, :nodes, :prev
 
     def fetch(date)
-      self.date = date
+      @prev = -1
+      @date = date
 
-      request(:post, data: {
-        frmDates: date.strftime('%j'),
-        frmChannels: '',
-        frmSearch: '',
-        x: '14',
-        y: '6'
-      })
+      request(:get, id: 8, pdate: date.strftime('%d/%m/%Y'))
     end
 
     def parse(data)
-      Nokogiri::HTML(data).css('a.black')
+      @nodes = Nokogiri::HTML(data).xpath('//tr[@bgcolor][.//a[@class="black"]]')
     end
 
     def process(node)
-      chid = node.attr(:href).match(/chid=(\d+)/)[1]
-      return unless mapping.key?(chid)
+      id, name = ['ert.vouli.gr', 'VOULI']
 
-      id, name = mapping[chid]
+      index = nodes.index(node)
+      nitem = nodes[index + 1] || nodes[0]
 
-      crow = node.ancestors('tr[bgcolor]').first
-      time = crow.first_element_child.text.strip
-      desc = crow.css('font').first || node
+      title = node.css('a.black').first
+      desc  = node.css('font').first || title
+      start = node.first_element_child.text.strip
+      stop  = nitem.first_element_child.text.strip
 
-      data      = context(chid)
-      data.date = data.date.tomorrow if data.prev > time.to_i
-      data.prev = time.to_i
+      @date = date.tomorrow if prev > start.to_i
+      @prev = start.to_i
+
+      sdate = start.to_i > stop.to_i ? date.tomorrow : date
+      start = date.strftime("%Y-%m-%d #{start}:00")
+      stop  = sdate.strftime("%Y-%m-%d #{stop}:00")
 
       {
         channel: {
@@ -184,37 +183,12 @@ module TvGuide
         },
         programme: {
           channel: id,
-          start: data.date.strftime("%Y-%m-%d #{time}:00"),
-          title: node.text.squish,
+          start: start,
+          stop: stop,
+          title: title.text.squish,
           desc: desc.text.squish
         }
       }
-    end
-
-    def run
-      groups = super.group_by do |item|
-        item.dig(:channel, :id)
-      end
-
-      groups.values.flat_map do |group|
-        group.map.with_index do |item, index|
-          node = group[index + 1] || group[0]
-          stop = Time.parse node.dig(:programme, :start)
-          stop = stop.tomorrow if stop < Time.parse(item.dig(:programme, :start))
-
-          item[:programme][:stop] = stop.to_s
-          item
-        end
-      end
-    end
-
-    private
-
-    def context(key)
-      self.store      ||= {}
-      self.store[key] ||= OpenStruct.new(date: date, prev: -1)
-
-      store[key]
     end
   end
 

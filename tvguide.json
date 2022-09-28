@@ -112,26 +112,6 @@
       "5815": ["digea.tvm.gr", "TVM"]
     }
   },
-  "ert": {
-    "url": "https://program.ert.gr/search.asp",
-    "headers": {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0",
-      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-      "Accept-Language": "en-US,en;q=0.5",
-      "Content-Type": "application/x-www-form-urlencoded",
-      "Origin": "https://www.program.ert.gr",
-      "Connection": "keep-alive",
-      "Referer": "https://program.ert.gr/search.asp"
-    },
-    "mapping": {
-      "8": ["ert.vouli.gr", "VOULI"],
-      "9": ["ert.ert1.gr", "ERT 1"],
-      "10": ["ert.ert3.gr", "ERT 3"],
-      "11": ["ert.ertworld.gr", "ERT WORLD"],
-      "24": ["ert.ertsports.gr", "ERT SPORTS"],
-      "49": ["ert.ert2.gr", "ERT 2"]
-    }
-  },
   "ertflix": {
     "url": "https://api.app.ertflix.gr",
     "headers": {
@@ -147,6 +127,17 @@
       "ert-news-4": ["ert.ertnews2.gr", "ERT NEWS 2"],
       "ept-sports-live": ["ert.ertsports.gr", "ERT SPORTS"],
       "ert-sports2": ["ert.ertsports2.gr", "ERT SPORTS 2"]
+    }
+  },
+  "vouli": {
+    "url": "https://program.ert.gr/Vouli/index.asp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0",
+      "Accept": "*/*",
+      "Accept-Language": "en-US,en;q=0.5",
+      "X-Requested-With": "XMLHttpRequest",
+      "Origin": "https://www.program.ert.gr",
+      "Referer": "https://program.ert.gr/Vouli/index.asp"
     }
   },
   "onetv": {
