@@ -54,7 +54,7 @@ module TvGuide
 
     def request(method, path = nil, body: nil, data: nil, **kwargs)
       resp = connection.send(method, path, **kwargs) do |req|
-        req.body = JSON.generate(data) if body
+        req.body = JSON.generate(body) if body
         req.body = URI.encode_www_form(data) if data
       end
 
@@ -95,6 +95,50 @@ module TvGuide
           stop: item.end_time,
           title: item.title_gre,
           desc: item.long_synopsis_gre
+        }
+      }
+    end
+  end
+
+  class Ertflix < Provider
+    def fetch(date)
+      data = request(:post, 'v1/EpgTile/FilterProgramTiles', body: {
+        platformCodename: 'www',
+        from: date.rfc3339,
+        to: date.tomorrow.rfc3339,
+        orChannelCodenames: mapping.keys
+      })
+
+      request(:post, 'v2/Tile/GetTiles', body: {
+        platformCodename: 'www',
+        requestedTiles: JSON.load(data)
+          .fetch('Programs', {})
+          .values.flatten
+          .filter_map { |item| { id: item['Id'] } }
+      })
+    end
+
+    def parse(data)
+      JSON.load(data).fetch('Tiles', [])
+    end
+
+    def process(item)
+      chid = item.dig('TileChannel', 'Codename')
+      return unless mapping.key?(chid)
+
+      id, name = mapping[chid]
+
+      {
+        channel: {
+          id: id,
+          name: name
+        },
+        programme: {
+          channel: id,
+          start: item['Start'],
+          stop: item['Stop'],
+          title: item['Title'],
+          desc: item['Description'] || item['Title']
         }
       }
     end
