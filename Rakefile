@@ -1,3 +1,5 @@
+require 'rake'
+
 require_relative 'channels'
 require_relative 'tvguide'
 
@@ -20,4 +22,15 @@ namespace :epg do
     TvGuide.run
     %x{gzip -k tvguide.xml}
   end
+end
+
+desc 'Generate playlist and tvguide'
+task :build do
+  Rake::Task['m3u:generate'].invoke
+  Rake::Task['epg:generate'].invoke
+end
+
+desc 'Clean generated files'
+task :clean do
+  %x{rm -rf playlist.m3u* tvguide.xml*}
 end
