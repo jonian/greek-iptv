@@ -68,10 +68,7 @@ module TvGuide
 
   class Digea < Provider
     def fetch(date)
-      request(:post, data: {
-        action: 'get_events',
-        date: date
-      })
+      request(:post, data: { action: 'get_events', date: date })
     end
 
     def parse(data)
@@ -79,10 +76,10 @@ module TvGuide
     end
 
     def process(item)
-      item = OpenStruct.new(**item)
-      return unless mapping.key?(item.channel_id)
+      chid = item.fetch('channel_id', '0')
+      return unless mapping.key?(chid)
 
-      id, name = mapping[item.channel_id]
+      id, name = mapping[chid]
 
       {
         channel: {
@@ -91,10 +88,10 @@ module TvGuide
         },
         programme: {
           channel: id,
-          start: item.actual_time,
-          stop: item.end_time,
-          title: item.title_gre,
-          desc: item.long_synopsis_gre
+          start: item['actual_time'],
+          stop: item['end_time'],
+          title: item['title_gre'],
+          desc: item['long_synopsis_gre']
         }
       }
     end
@@ -114,7 +111,7 @@ module TvGuide
         requestedTiles: JSON.load(data)
           .fetch('Programs', {})
           .values.flatten
-          .filter_map { |item| { id: item['Id'] } }
+          .map { |item| { id: item['Id'] } }
       })
     end
 
@@ -193,16 +190,17 @@ module TvGuide
   end
 
   class Onetv < Provider
-    attr_reader :data, :index, :date
+    attr_reader :res, :index, :date
 
     def matrix
       Array(Date.today.yesterday..Date.today.next.succ)
     end
 
     def fetch(date)
-      @date   = date
-      @index  = matrix.index(date)
-      @data ||= request(:get)
+      @date  = date
+      @index = matrix.index(date)
+
+      @res ||= request(:get)
     end
 
     def parse(data)
@@ -210,12 +208,14 @@ module TvGuide
     end
 
     def process(node)
-      time  = node.css('span.time').first.text
+      id, name = ['one.onetv.gr', 'ONE TV']
+
       title = node.css('a.title').first.text
       desc  = node.css('a.program-desc').first.text
 
-      id, name    = ['one.onetv.gr', 'ONE TV']
-      start, stop = time.strip.split('-').map(&:strip)
+      time  = node.css('span.time').first.text.strip
+      start = time.match(/(\d{2}:\d{2})\s+?-/)[1]
+      stop  = time.match(/-\s+?(\d{2}:\d{2})/)[1]
 
       sdate = start.to_i > stop.to_i ? date.tomorrow : date
       start = date.strftime("%Y-%m-%d #{start}:00")
