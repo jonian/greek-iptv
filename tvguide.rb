@@ -4,6 +4,8 @@ require 'faraday'
 
 require 'builder'
 require 'nokogiri'
+require 'unaccent'
+
 require 'active_support/all'
 
 ENV['TZ'] = 'Europe/Athens'
@@ -193,7 +195,23 @@ module TvGuide
     attr_reader :res, :index, :date
 
     def matrix
-      Array(Date.today.yesterday..Date.today.next.succ)
+      @res ||= request(:get)
+
+      @mtx ||= begin
+        days = Nokogiri::HTML(res).css("#Days a br").map do |node|
+          Unaccent.unaccent(node.next.text).split.map do |text|
+            mapping.fetch(text, text).to_i
+          end
+        end
+
+        days.map.with_index do |(day, month), idx|
+          prev = days.dig(idx, 0)
+          year = Date.today.year
+          year = year + 1 if prev > day
+
+          Date.new(year, month, day)
+        end
+      end
     end
 
     def fetch(date)
@@ -204,7 +222,7 @@ module TvGuide
     end
 
     def parse(data)
-      Nokogiri::HTML(data).css(".tvguide-item:nth-child(#{index}) > dl.grid")
+      Nokogiri::HTML(data).css(".tvguide-item:nth-child(#{index + 1}) > dl.grid")
     end
 
     def process(node)
