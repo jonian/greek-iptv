@@ -83,7 +83,7 @@
       "3004": ["digea.action24.gr", "ACTION24"],
       "3008": ["digea.atticatv.gr", "ATTICA TV"],
       "3012": ["digea.bluesky.gr", "BLUE SKY"],
-      "3016": ["digea.channel9.gr", "CHANNEL 9"],
+      "3016": ["digea.onetv.gr", "ONE HD"],
       "3030": ["digea.aechannel.gr", "AE CHANNEL"],
       "3034": ["digea.hightv.gr", "HIGH TV"],
       "3038": ["digea.kontra.gr", "KONTRA"],
@@ -138,31 +138,6 @@
       "X-Requested-With": "XMLHttpRequest",
       "Origin": "https://www.program.ert.gr",
       "Referer": "https://program.ert.gr/Vouli/index.asp"
-    }
-  },
-  "onetv": {
-    "url": "https://onetv.gr/tvguide",
-    "headers": {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0",
-      "Accept": "*/*",
-      "Accept-Language": "en-US,en;q=0.5",
-      "X-Requested-With": "XMLHttpRequest",
-      "Origin": "https://onetv.gr",
-      "Referer": "https://onetv.gr/tvguide/"
-    },
-    "mapping": {
-      "ΙΑΝΟΥΑΡΙΟΥ": "01",
-      "ΦΕΒΡΟΥΑΡΙΟΥ": "02",
-      "ΜΑΡΤΙΟΥ": "03",
-      "ΑΠΡΙΛΙΟΥ": "04",
-      "ΜΑΙΟΥ": "05",
-      "ΙΟΥΝΙΟΥ": "06",
-      "ΙΟΥΛΙΟΥ": "07",
-      "ΑΥΓΟΥΣΤΟΥ": "08",
-      "ΣΕΠΤΕΜΒΡΙΟΥ": "09",
-      "ΟΚΤΩΒΡΙΟΥ": "10",
-      "ΝΟΕΜΒΡΙΟΥ": "11",
-      "ΔΕΚΕΜΒΡΙΟΥ": "12"
     }
   }
 }
