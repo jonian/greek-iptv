@@ -17,7 +17,7 @@
     "title": "ERT3 HD",
     "name": "ert.ert3.gr",
     "logo": "ert3.png",
-    "web": "https://www.ertflix.gr/en/epg/channel/ept3-live",
+    "web": "https://www.ertflix.gr/en/epg/channel/ept3-live-2",
     "m3u": "https://cbd537474fbad4634b64787657ff6456.msvdn.net/ert3/ert_ev3_main/mainabr/playlist_dvr.m3u8"
   },
   {
@@ -108,7 +108,7 @@
     "title": "ERT SPORTS 2",
     "name": "ert.ertsports2.gr",
     "logo": "ertsports2.png",
-    "web": "https://www.ertflix.gr/en/epg/channel/ert-sports2",
+    "web": "https://www.ertflix.gr/en/epg/channel/ert-sports-2-live-ww",
     "m3u": "https://cbd537474fbad4634b64787657ff6456.msvdn.net/sports2/ert_sports2_main/mainabr/playlist.m3u8"
   },
   {

@@ -121,12 +121,12 @@
     "mapping": {
       "ept1-live": ["ert.ert1.gr", "ERT 1"],
       "ept2-live": ["ert.ert2.gr", "ERT 2"],
-      "ept3-live": ["ert.ert3.gr", "ERT 3"],
+      "ept3-live-2": ["ert.ert3.gr", "ERT 3"],
       "ept-world-live": ["ert.ertworld.gr", "ERT WORLD"],
       "ert-news": ["ert.ertnews.gr", "ERT NEWS"],
       "ert-news-4": ["ert.ertnews2.gr", "ERT NEWS 2"],
       "ept-sports-live": ["ert.ertsports.gr", "ERT SPORTS"],
-      "ert-sports2": ["ert.ertsports2.gr", "ERT SPORTS 2"]
+      "ert-sports-2-live-ww": ["ert.ertsports2.gr", "ERT SPORTS 2"]
     }
   },
   "vouli": {
