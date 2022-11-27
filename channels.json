@@ -91,13 +91,6 @@
     "m3u": "https://cbd537474fbad4634b64787657ff6456.msvdn.net/news/ert_news_main/mainabr/playlist_dvr.m3u8"
   },
   {
-    "title": "ERT NEWS 2",
-    "name": "ert.ertnews2.gr",
-    "logo": "ertnews2.png",
-    "web": "https://www.ertflix.gr/en/epg/channel/ert-news-4",
-    "m3u": "https://cbd537474fbad4634b64787657ff6456.msvdn.net/news2/ert_news2_main/mainabr/playlist.m3u8"
-  },
-  {
     "title": "ERT SPORTS",
     "name": "ert.ertsports.gr",
     "logo": "ertsports1.png",
