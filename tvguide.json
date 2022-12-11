@@ -124,8 +124,7 @@
       "ept3-live-2": ["ert.ert3.gr", "ERT 3"],
       "ept-world-live": ["ert.ertworld.gr", "ERT WORLD"],
       "ert-news": ["ert.ertnews.gr", "ERT NEWS"],
-      "ert-sports-live-ww": ["ert.ertsports.gr", "ERT SPORTS"],
-      "ert-sports-2-live-ww": ["ert.ertsports2.gr", "ERT SPORTS 2"]
+      "ert-sports-live-ww": ["ert.ertsports.gr", "ERT SPORTS"]
     }
   },
   "vouli": {
