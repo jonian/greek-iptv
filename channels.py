@@ -24,9 +24,11 @@ class Parser(Gtk.Box):
 
     self.context = WebKit2.WebContext.new_ephemeral()
     self.webview = WebKit2.WebView.new_with_context(self.context)
-    self.webview.connect('resource-load-started', self.on_load_resource)
+    self.webdata = self.webview.get_website_data_manager()
 
+    self.webview.connect('resource-load-started', self.on_load_resource)
     self.webview.set_is_muted(True)
+    self.webdata.set_tls_errors_policy(WebKit2.TLSErrorsPolicy.IGNORE)
 
     self.pack_start(self.webview, True, True, 0)
 
