@@ -25,7 +25,7 @@
     "name": "digea.ant1.gr",
     "logo": "ant1.png",
     "web": "https://watch.antennaplus.gr/#/live/ant1",
-    "m3u": "http://d1nfykbwa3n98t.cloudfront.net/out/v1/b0966e1e2108447ca9d90048c9ddc951/ant1-cmaf/ant1.m3u8"
+    "m3u": "http://d1nfykbwa3n98t.cloudfront.net/out/v1/b0966e1e2108447ca9d90048c9ddc951/ant1-cmaf/ant1_1.m3u8"
   },
   {
     "title": "MEGA HD",
@@ -67,7 +67,7 @@
     "name": "digea.mtv.gr",
     "logo": "maktv.png",
     "web": "https://watch.antennaplus.gr/#/live/maktv",
-    "m3u": "http://dlm34ll53zqql.cloudfront.net/out/v1/ab680def497d44e4864475e33e7a3efd/hls/maktv.m3u8"
+    "m3u": "http://dlm34ll53zqql.cloudfront.net/out/v1/ab680def497d44e4864475e33e7a3efd/hls/maktv_1.m3u8"
   },
   {
     "title": "KONTRA",
