@@ -8,6 +8,7 @@ on:
   push:
     branches: [master]
     paths:
+      - 'channels.json'
       - 'tvguide.json'
       - 'tvguide.rb'
 
