@@ -63,6 +63,13 @@
     "m3u": "https://liveopencloud.siliconweb.com/1/ZlRza2R6L2tFRnFJ/eWVLSlQx/hls/live/playlist.m3u8"
   },
   {
+    "title": "MAKEDONIA HD",
+    "name": "digea.mtv.gr",
+    "logo": "maktv.png",
+    "web": "https://watch.antennaplus.gr/#/live/maktv",
+    "m3u": "http://dlm34ll53zqql.cloudfront.net/out/v1/ab680def497d44e4864475e33e7a3efd/hls/maktv.m3u8"
+  },
+  {
     "title": "KONTRA",
     "name": "digea.kontra.gr",
     "logo": "kontra.png",
