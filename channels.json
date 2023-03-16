@@ -91,6 +91,13 @@
     "m3u": "https://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8"
   },
   {
+    "title": "ATTICA TV",
+    "name": "digea.attica.gr",
+    "logo": "attica.png",
+    "web": "https://www.attica-tv.gr/live-stream",
+    "m3u": "https://atticatv.siliconweb.com/atticatv/atticaliveabr/playlist.m3u8"
+  },
+  {
     "title": "Netmax TV",
     "name": "films.netmax.com",
     "logo": "netmax.png",
