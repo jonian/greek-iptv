@@ -84,6 +84,13 @@
     "m3u": "https://streaming.onetv.gr/show/onetv.m3u8"
   },
   {
+    "title": "ACTION 24",
+    "name": "digea.action24.gr",
+    "logo": "action24.png",
+    "web": "https://www.action24.gr/live-stream",
+    "m3u": "https://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8"
+  },
+  {
     "title": "Netmax TV",
     "name": "films.netmax.com",
     "logo": "netmax.png",
