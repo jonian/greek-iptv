@@ -81,7 +81,7 @@
     "name": "digea.onechannel.gr",
     "logo": "one.png",
     "web": "https://onetv.gr",
-    "m3u": "https://streaming.onetv.gr/show/onetv.m3u8"
+    "m3u": "https://usher.ttvnw.net/api/channel/hls/onechanneltv.m3u8"
   },
   {
     "title": "ACTION 24",
