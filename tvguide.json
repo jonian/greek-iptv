@@ -111,6 +111,20 @@
       "5860": ["digea.volcano.gr", "VOLCANO"]
     }
   },
+  "cosmote": {
+    "url": "https://www.cosmotetv.gr/portal/residential/program",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
+      "Referer": "https://www.cosmotetv.gr/portal/residential/program",
+      "Origin": "https://www.cosmotetv.gr/",
+      "Content-Type": "application/json"
+    },
+    "mapping": {
+      "39846": ["ert.ert1.gr", "ERT 1"],
+      "39404": ["ert.ert2.gr", "ERT 2"],
+      "39557": ["ert.ert3.gr", "ERT 3"]
+    }
+  },
   "ertflix": {
     "url": "https://api.app.ertflix.gr",
     "headers": {
@@ -118,9 +132,6 @@
       "Content-Type": "application/json"
     },
     "mapping": {
-      "ept1-live": ["ert.ert1.gr", "ERT 1"],
-      "ept2-live": ["ert.ert2.gr", "ERT 2"],
-      "ept3-live-2": ["ert.ert3.gr", "ERT 3"],
       "ept-world-live": ["ert.ertworld.gr", "ERT WORLD"],
       "ert-news": ["ert.ertnews.gr", "ERT NEWS"],
       "ert-sports-live-ww": ["ert.ertsports.gr", "ERT SPORTS"]
