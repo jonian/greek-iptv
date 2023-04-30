@@ -117,7 +117,7 @@ module TvGuide
         start: '0',
         end: '102',
         platform: 'DTH',
-        categoryId: '-1'
+        categoryId: '37155'
       }
 
       query.transform_keys! { |key| "p_p_#{key}" }
