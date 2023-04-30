@@ -1,6 +1,8 @@
 require 'uri'
 require 'json'
+
 require 'faraday'
+require 'faraday/retry'
 
 require 'builder'
 require 'nokogiri'
@@ -51,7 +53,10 @@ module TvGuide
     private
 
     def connection
-      Faraday.new(config['url'], headers: config['headers'], ssl: { verify: false })
+      Faraday.new(config['url'], ssl: { verify: false }) do |conn|
+        conn.headers = config['headers']
+        conn.request :retry, max: 5, interval: 2, interval_randomness: 0.5
+      end
     end
 
     def request(method, path = nil, body: nil, data: nil, **kwargs)
