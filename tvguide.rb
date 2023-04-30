@@ -5,7 +5,6 @@ require 'faraday'
 require 'faraday/retry'
 
 require 'builder'
-require 'nokogiri'
 require 'unaccent'
 
 require 'active_support/all'
@@ -210,54 +209,6 @@ module TvGuide
           stop: item['Stop'],
           title: item['Title'],
           desc: item['Description'] || item['Title']
-        }
-      }
-    end
-  end
-
-  class Vouli < Provider
-    attr_reader :date, :nodes, :prev
-
-    def fetch(date)
-      @prev = -1
-      @date = date
-
-      request(:get, id: 8, pdate: date.strftime('%d/%m/%Y'))
-    end
-
-    def parse(data)
-      @nodes = Nokogiri::HTML(data).xpath('//tr[@bgcolor][.//a[@class="black"]]')
-    end
-
-    def process(node)
-      id, name = ['ert.vouli.gr', 'VOULI']
-
-      index = nodes.index(node)
-      nitem = nodes[index + 1] || nodes[0]
-
-      title = node.css('a.black').first
-      desc  = node.css('font').first || title
-      start = node.first_element_child.text.strip
-      stop  = nitem.first_element_child.text.strip
-
-      @date = date.tomorrow if prev > start.to_i
-      @prev = start.to_i
-
-      sdate = start.to_i > stop.to_i ? date.tomorrow : date
-      start = date.strftime("%Y-%m-%d #{start}:00")
-      stop  = sdate.strftime("%Y-%m-%d #{stop}:00")
-
-      {
-        channel: {
-          id: id,
-          name: name
-        },
-        programme: {
-          channel: id,
-          start: start,
-          stop: stop,
-          title: title.text.squish,
-          desc: desc.text.squish
         }
       }
     end

@@ -122,7 +122,8 @@
     "mapping": {
       "39846": ["ert.ert1.gr", "ERT 1"],
       "39404": ["ert.ert2.gr", "ERT 2"],
-      "39557": ["ert.ert3.gr", "ERT 3"]
+      "39557": ["ert.ert3.gr", "ERT 3"],
+      "38673": ["ert.vouli.gr", "VOULI"]
     }
   },
   "ertflix": {
@@ -135,17 +136,6 @@
       "ept-world-live": ["ert.ertworld.gr", "ERT WORLD"],
       "ert-news": ["ert.ertnews.gr", "ERT NEWS"],
       "ert-sports-live-ww": ["ert.ertsports.gr", "ERT SPORTS"]
-    }
-  },
-  "vouli": {
-    "url": "https://program.ert.gr/Vouli/index.asp",
-    "headers": {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0",
-      "Accept": "*/*",
-      "Accept-Language": "en-US,en;q=0.5",
-      "X-Requested-With": "XMLHttpRequest",
-      "Origin": "https://www.program.ert.gr",
-      "Referer": "https://program.ert.gr/Vouli/index.asp"
     }
   }
 }
