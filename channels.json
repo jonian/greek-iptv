@@ -77,13 +77,6 @@
     "m3u": "https://kontralive.siliconweb.com/live/kontratv/playlist.m3u8"
   },
   {
-    "title": "ONE HD",
-    "name": "digea.onechannel.gr",
-    "logo": "one.png",
-    "web": "https://onetv.gr",
-    "m3u": "https://usher.ttvnw.net/api/channel/hls/onechanneltv.m3u8"
-  },
-  {
     "title": "ACTION 24",
     "name": "digea.action24.gr",
     "logo": "action24.png",
