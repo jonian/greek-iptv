@@ -14,7 +14,7 @@ module Channels
     end
 
     def info
-      %Q{#EXTINF:-1 group-title="#{group}" tvg-name="#{name}" tvg-logo="#{image}",#{title}}
+      %Q{#EXTINF:-1 group-title="#{group}" tvg-id="#{name}" tvg-logo="#{image}",#{title}}
     end
 
     def json
