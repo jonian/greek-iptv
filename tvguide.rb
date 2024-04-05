@@ -96,8 +96,8 @@ module TvGuide
           channel: id,
           start: item['actual_time'],
           stop: item['end_time'],
-          title: item['title_gre'],
-          desc: item['long_synopsis_gre']
+          title: item['title'],
+          desc: item['long_synopsis']
         }
       }
     end
