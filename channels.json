@@ -102,21 +102,21 @@
     "name": "ert.ertworld.gr",
     "logo": "ertworld.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept-world-live",
-    "m3u": "https://telmacosa.s.llnwi.net/ertlive/ertworld/default/index.m3u8"
+    "m3u": "https://ertflix.s.llnwi.net/ertlive/ertworld/default/index.m3u8"
   },
   {
     "title": "ERT NEWS",
     "name": "ert.ertnews.gr",
     "logo": "ertnews.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ert-news",
-    "m3u": "https://telmacosa.s.llnwi.net/ertlive/ertnews/default/index.m3u8"
+    "m3u": "https://ertflix.s.llnwi.net/ertlive/ertnews/default/index.m3u8"
   },
   {
     "title": "ERT SPORTS",
     "name": "ert.ertsports.gr",
     "logo": "ertsports.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ert-sports-live-ww",
-    "m3u": "https://telmacosa.s.llnwi.net/ertlive/ertsports1/default/index.m3u8"
+    "m3u": "https://ertflix.s.llnwi.net/ertlive/ertsports1/default/index.m3u8"
   },
   {
     "title": "VOULI",
