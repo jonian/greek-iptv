@@ -46,7 +46,7 @@
     "name": "digea.star.gr",
     "logo": "star.png",
     "web": "https://www.star.gr/tv/live-stream",
-    "m3u": "https://livestar.siliconweb.com/media/star1/star1.m3u8"
+    "m3u": "https://livestar.siliconweb.com/media/star4/star4.m3u8"
   },
   {
     "title": "SKAI HD",
@@ -95,7 +95,7 @@
     "name": "films.netmax.com",
     "logo": "netmax.png",
     "web": "https://netmaxtv.com/live",
-    "m3u": "http://live.netmaxtv.com:8080/live/live/playlist.m3u8"
+    "m3u": "https://live.netmaxtv.com:8081/live/live/playlist.m3u8"
   },
   {
     "title": "ERT WORLD",
