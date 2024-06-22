@@ -26,6 +26,8 @@ module TvGuide
     end
 
     def run
+      return [] if mapping.blank?
+
       matrix.flat_map do |item|
         parse(fetch item).filter_map do |item|
           process(item) if item
