@@ -138,6 +138,7 @@
       "ert-sports-live-ww": ["ert.ertsports1.gr", "ERT SPORTS 1"],
       "ert-sports-2-live-ww": ["ert.ertsports2.gr", "ERT SPORTS 2"],
       "demo-channel": ["ert.ertkids.gr", "ERT KIDS"],
+      "music-tv": ["ert.ertmusic.gr", "ERT MUSIC"]
     }
   }
 }
