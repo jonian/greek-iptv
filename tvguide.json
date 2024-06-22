@@ -135,7 +135,7 @@
     "mapping": {
       "ept-world-live": ["ert.ertworld.gr", "ERT WORLD"],
       "ert-news": ["ert.ertnews.gr", "ERT NEWS"],
-      "ert-sports-live-ww": ["ert.ertsports.gr", "ERT SPORTS"]
+      "ert-sports-live-ww": ["ert.ertsports1.gr", "ERT SPORTS 1"],
     }
   }
 }
