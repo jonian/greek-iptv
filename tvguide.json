@@ -136,6 +136,7 @@
       "ept-world-live": ["ert.ertworld.gr", "ERT WORLD"],
       "ert-news": ["ert.ertnews.gr", "ERT NEWS"],
       "ert-sports-live-ww": ["ert.ertsports1.gr", "ERT SPORTS 1"],
+      "ert-sports-2-live-ww": ["ert.ertsports2.gr", "ERT SPORTS 2"],
     }
   }
 }
