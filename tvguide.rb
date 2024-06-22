@@ -214,6 +214,40 @@ module TvGuide
     end
   end
 
+  class Static < Provider
+    def fetch(date)
+      @date = date
+      config['programme']
+    end
+
+    def process(item)
+      chid = item['id']
+      return unless mapping.key?(chid)
+
+      id, name = mapping[chid]
+
+      stime = item['start']
+      etime = item['end']
+
+      start = @date.strftime("%Y-%m-%d #{stime}:00")
+      stop  = @date.strftime("%Y-%m-%d #{etime}:00")
+
+      {
+        channel: {
+          id: id,
+          name: name
+        },
+        programme: {
+          channel: id,
+          start: start,
+          stop: stop,
+          title: item['title'],
+          desc: item['desc'] || item['title']
+        }
+      }
+    end
+  end
+
   class Builder
     attr_reader :ids
 

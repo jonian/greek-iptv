@@ -140,5 +140,19 @@
       "demo-channel": ["ert.ertkids.gr", "ERT KIDS"],
       "music-tv": ["ert.ertmusic.gr", "ERT MUSIC"]
     }
+  },
+  "static": {
+    "mapping": {
+      "00001": ["films.netmax.com", "Netmax TV"]
+    },
+    "programme": [
+      {
+        "id": "00001",
+        "start": "00:00",
+        "end": "24:00",
+        "title": "Ξένες Ταινίες",
+        "desc": "Διάφορες ξένες ταινίες με ελληνικούς υπότιτλους."
+      }
+    ]
   }
 }
