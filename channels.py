@@ -42,6 +42,9 @@ class Parser(Gtk.Box):
     if resource.get_response().get_mime_type() in VIDEO_MIME_TYPES:
       self.emit('success', resource.get_uri())
 
+  def terminate(self):
+    self.webview.terminate_web_process()
+
 
 class Crawler:
 
@@ -68,6 +71,7 @@ class Crawler:
     Gtk.main()
 
   def quit(self):
+    self.parser.terminate()
     Gtk.main_quit()
 
   def on_parser_success(self, _parser, stream_uri):
