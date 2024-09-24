@@ -1,4 +1,5 @@
 require 'json'
+require 'ostruct'
 
 module Channels
   GITURI = 'https://raw.githubusercontent.com/jonian/greek-iptv/master'

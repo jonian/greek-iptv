@@ -1,5 +1,6 @@
 require 'uri'
 require 'json'
+require 'ostruct'
 
 require 'faraday'
 require 'faraday/retry'
