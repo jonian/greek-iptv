@@ -108,54 +108,29 @@ module TvGuide
 
   class Cosmote < Provider
     def fetch(date)
-      @date = date
-
       query = {
-        id: 'dayprogram_WAR_OTETVportlet',
-        lifecycle: '2',
-        state: 'normal',
-        mode: 'view',
-        cacheability: 'cacheLevelPage'
+        from: date.beginning_of_day.to_i,
+        to: date.end_of_day.to_i,
+        callSigns: mapping.keys.join('|'),
+        endingIncludedInRange: false
       }
 
-      param = {
-        date: date.strftime('%d-%m-%Y'),
-        feedType: 'EPG',
-        start: '0',
-        end: '102',
-        platform: 'DTH',
-        categoryId: '37155'
-      }
-
-      query.transform_keys! { |key| "p_p_#{key}" }
-      param.transform_keys! { |key| "_dayprogram_WAR_OTETVportlet_#{key}" }
-
-      request(:get, **query, **param)
+      request(:get, **query)
     end
 
     def parse(data)
       JSON.load(data).fetch('channels', []).flat_map do |ch|
-        ch.fetch('shows', []).map do |sh|
-          sh.merge({'channelId' => ch['ID'] })
+        ch.fetch('items', []).map do |sh|
+          sh.merge({'channelId' => ch['callSign'] })
         end
       end
     end
 
     def process(item)
-      chid = item.fetch('channelId', '0')
+      chid = item.fetch('channelId', 'none')
       return unless mapping.key?(chid)
 
       id, name = mapping[chid]
-
-      stime = item['startTime']
-      etime = item['endTime']
-
-      start = @date.strftime("%Y-%m-%d #{stime}:00")
-      stop  = @date.strftime("%Y-%m-%d #{etime}:00")
-
-      if start.to_time > stop.to_time
-        stop = @date.tomorrow.strftime("%Y-%m-%d #{etime}:00")
-      end
 
       {
         channel: {
@@ -164,10 +139,10 @@ module TvGuide
         },
         programme: {
           channel: id,
-          start: start,
-          stop: stop,
+          start: item['startTime'],
+          stop: item['endTime'],
           title: item['title'],
-          desc: item['title']
+          desc: item['description'] || item['title']
         }
       }
     end

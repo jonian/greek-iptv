@@ -112,18 +112,18 @@
     }
   },
   "cosmote": {
-    "url": "https://www.cosmotetv.gr/portal/residential/program",
+    "url": "https://mwapi-prod.cosmotetvott.gr/api/v3.4/epg/listings/el",
     "headers": {
       "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
-      "Referer": "https://www.cosmotetv.gr/portal/residential/program",
+      "Referer": "https://www.cosmotetv.gr/portal/program",
       "Origin": "https://www.cosmotetv.gr/",
       "Content-Type": "application/json"
     },
     "mapping": {
-      "39846": ["ert.ert1.gr", "ERT 1"],
-      "39404": ["ert.ert2.gr", "ERT 2"],
-      "39557": ["ert.ert3.gr", "ERT 3"],
-      "38673": ["ert.vouli.gr", "VOULI"]
+      "ert1": ["ert.ert1.gr", "ERT 1"],
+      "ert2": ["ert.ert2.gr", "ERT 2"],
+      "ert3": ["ert.ert3.gr", "ERT 3"],
+      "vouli": ["ert.vouli.gr", "VOULI"]
     }
   },
   "ertflix": {
