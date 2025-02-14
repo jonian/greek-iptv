@@ -4,21 +4,21 @@
     "name": "ert.ert1.gr",
     "logo": "ert1.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept1-live",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/ert1/clrdef24723b/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/ert1/clrdef24723b/index.m3u8"
   },
   {
     "title": "ERT2 HD",
     "name": "ert.ert2.gr",
     "logo": "ert2.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept2-live",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/ert2/clrdef24828z/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/ert2/clrdef24828z/index.m3u8"
   },
   {
     "title": "ERT3 HD",
     "name": "ert.ert3.gr",
     "logo": "ert3.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept3-live-2",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/ert3/clrdef24828n/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/ert3/clrdef24828n/index.m3u8"
   },
   {
     "title": "ANT1 HD",
@@ -109,48 +109,48 @@
     "name": "ert.ertworld.gr",
     "logo": "ertworld.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept-world-live",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/ertworld/default/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/ertworld/default/index.m3u8"
   },
   {
     "title": "ERT NEWS",
     "name": "ert.ertnews.gr",
     "logo": "ertnews.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ert-news",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/ertnews/default/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/ertnews/hls8test/index.m3u8"
   },
   {
     "title": "ERT SPORTS 1",
     "name": "ert.ertsports1.gr",
     "logo": "ertsports1.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ert-sports-live-ww",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/ertsports1/clrdef24724a/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/ertsports1/clrdef24724a/index.m3u8"
   },
   {
     "title": "ERT SPORTS 2",
     "name": "ert.ertsports2.gr",
     "logo": "ertsports2.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ert-sports-2-live-ww",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/ertsports2/default/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/ertsports2/clrdef24724b/index.m3u8"
   },
   {
     "title": "ERT KIDS",
     "name": "ert.ertkids.gr",
     "logo": "ertkids.png",
     "web": "https://www.ertflix.gr/en/epg/channel/demo-channel",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/kids/default/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/kids/default/index.m3u8"
   },
   {
     "title": "ERT MUSIC",
     "name": "ert.ertmusic.gr",
     "logo": "ertmusic.png",
     "web": "https://www.ertflix.gr/en/epg/channel/music-tv",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/music/default/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/music/default/index.m3u8"
   },
   {
     "title": "VOULI",
     "name": "ert.vouli.gr",
     "logo": "vouli.png",
     "web": "https://www.ertflix.gr/en/epg/channel/boule",
-    "m3u": "https://ertflix.s.llnwi.net/ertlive/vouli/default/index.m3u8"
+    "m3u": "https://ertflix.akamaized.net/ertlive/vouli/default/index.m3u8"
   }
 ]
