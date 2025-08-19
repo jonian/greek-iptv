@@ -60,7 +60,7 @@
     "name": "digea.openbeyond.gr",
     "logo": "open.png",
     "web": "https://www.tvopen.gr/live",
-    "m3u": "https://liveopencloud.siliconweb.com/1/ZlRza2R6L2tFRnFJ/eWVLSlQx/hls/live/playlist.m3u8"
+    "m3u": "https://liveopen.siliconweb.com/openTvLive/liveopen/playlist.m3u8"
   },
   {
     "title": "MAKEDONIA HD",
