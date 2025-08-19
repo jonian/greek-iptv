@@ -11,14 +11,14 @@
     "name": "ert.ert2.gr",
     "logo": "ert2.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept2-live",
-    "m3u": "https://ertflix.akamaized.net/ertlive/ert2/clrdef24828z/index.m3u8"
+    "m3u": "https://ertflix-greece.siliconweb.com/mpegts/618618_2341557/master_mpegts.m3u8"
   },
   {
     "title": "ERT3 HD",
     "name": "ert.ert3.gr",
     "logo": "ert3.png",
     "web": "https://www.ertflix.gr/en/epg/channel/ept3-live-2",
-    "m3u": "https://ertflix.akamaized.net/ertlive/ert3/clrdef24828n/index.m3u8"
+    "m3u": "https://ertflix-greece.siliconweb.com/mpegts/618618_2341560/master_mpegts.m3u8"
   },
   {
     "title": "ANT1 HD",
@@ -136,7 +136,7 @@
     "title": "ERT KIDS",
     "name": "ert.ertkids.gr",
     "logo": "ertkids.png",
-    "web": "https://www.ertflix.gr/en/epg/channel/demo-channel",
+    "web": "https://www.ertflix.gr/en/epg/channel/ert-kids-live",
     "m3u": "https://ertflix.akamaized.net/ertlive/kids/default/index.m3u8"
   },
   {
